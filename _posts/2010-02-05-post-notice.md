@@ -1,10 +1,9 @@
 ---
 title: "Post: Notice"
-categories:
-  - Post Formats
-tags:
-  - Post Formats
-  - notice
+excerpt: "Leaving it empty will prevent showing the excerpt"
+categories: [NLP]
+header:
+  teaser: /assets/images/cover_photo.jpg
 ---
 
 A notice displays information that explains nearby content. Often used to call attention to a particular detail.
