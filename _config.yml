@@ -310,6 +310,6 @@ defaults:
 
 ########## grid
 collections:
-  portfolio:
+  projects:
     output: true
     permalink: /projects/:path/
