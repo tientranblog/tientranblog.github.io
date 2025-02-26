@@ -51,7 +51,7 @@ The training organization has 46 videos covering various Machine Learning topics
 - Create Visualization Components: Use Bokeh to build interactive visualizations, such as bar charts to show video count and average text length by module, word clouds to display frequent keyphrases, annular wedges to represent topic distribution within modules, and a horizontal bar chart to visualize text length for each video. 
 - Create Filterable Table: Implement a searchable and filterable table using Bokeh to display keyphrases and their associated videos. 
 - Assemble Dashboard Layout: Arrange the visualization components and table within a Bokeh layout to create the final dashboard. 
-- Display Dashboard: Show the dashboard using the `show()` function from Bokeh, allowing users to interact with the visualizations and search for video content using keyphrases.
+- Display Dashboard: Show the dashboard using Bokeh, allowing users to interact with the visualizations and search for video content using keyphrases.
 
 ## Functionalities
 **a. Compare modules**
