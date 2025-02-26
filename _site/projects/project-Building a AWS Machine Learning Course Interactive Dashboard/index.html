@@ -1,0 +1,493 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Building a AWS Machine Learning Course Interactive Dashboard - Tien Tran Blog</title>
+<meta name="description" content="A user-friendly dashboard application for exploring machine learning course videos">
+
+
+  <meta name="author" content="Tien Tran">
+  
+  <meta property="article:author" content="Tien Tran">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Tien Tran Blog">
+<meta property="og:title" content="Building a AWS Machine Learning Course Interactive Dashboard">
+<meta property="og:url" content="http://localhost:4000/projects/project-Building%20a%20AWS%20Machine%20Learning%20Course%20Interactive%20Dashboard/">
+
+
+  <meta property="og:description" content="A user-friendly dashboard application for exploring machine learning course videos">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/obsidian/9ff33e130373914fe50742562984fb89.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-02-25T21:12:07-05:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/projects/project-Building%20a%20AWS%20Machine%20Learning%20Course%20Interactive%20Dashboard/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tien Tran Blog Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Tien Tran Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/author_avt.jpg" alt="Tien Tran" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Tien Tran</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Welcome to my blog!</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ontario, Canada</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/tienththtran" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/@tienththtran" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">Youtube</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/tientranblog" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Building a AWS Machine Learning Course Interactive Dashboard">
+    <meta itemprop="description" content="A user-friendly dashboard application for exploring machine learning course videos">
+    <meta itemprop="datePublished" content="2025-02-25T21:12:07-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/projects/project-Building%20a%20AWS%20Machine%20Learning%20Course%20Interactive%20Dashboard/" itemprop="url">Building a AWS Machine Learning Course Interactive Dashboard
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#business-scenario">Business Scenario</a></li><li><a href="#techniques">Techniques</a></li><li><a href="#workflow">Workflow</a><ul><li><a href="#1-data-acquisition-and-preprocessing">1. Data Acquisition and Preprocessing</a></li><li><a href="#2-keyphrase-extraction">2. Keyphrase Extraction</a></li><li><a href="#3-data-organization-and-analysis">3. Data Organization and Analysis</a></li><li><a href="#4-dashboard-creation-and-visualization">4. Dashboard Creation and Visualization</a></li></ul></li><li><a href="#functionalities">Functionalities</a></li><li><a href="#demo">Demo</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h2 id="business-scenario"><strong>Business Scenario</strong></h2>
+
+<p>The training organization has 46 videos covering various Machine Learning topics. The project aims to develop a user-friendly dashboard that enables students to easily find relevant video content based on their search queries.</p>
+
+<h2 id="techniques"><strong>Techniques</strong></h2>
+<p><strong>a. Speech-to-text</strong></p>
+<ul>
+  <li>ffmpeg: video and audio processing.</li>
+  <li>MoviePy: video editing and manipulation.</li>
+  <li>OpenAI Whisper: speech-to-text conversion.
+<strong>b. Text normalization</strong></li>
+  <li>NLTK: text processing and analysis.
+<strong>c. Keyphrase extraction</strong></li>
+  <li>Transformers: natural language processing tasks like keyphrase extraction. This technique uses a pre-trained keyphrase extraction model (<code class="language-plaintext highlighter-rouge">ml6team/keyphrase-extraction-kbir-inspec</code>) from the Hugging Face Transformers library. This model is likely based on a BERT-like architecture and is trained to identify important keyphrases within text.
+<strong>d. Data handling</strong></li>
+  <li>Pandas: Used for data loading, storage, and manipulation. The transcribed text, keyphrases, and other information are likely stored in Pandas DataFrames for efficient processing and analysis.
+<strong>e. Data visualization</strong></li>
+  <li>WordCloud: generating word clouds.</li>
+  <li>Bokeh: interactive visualizations. This library is used to create interactive visualizations like bar charts, word clouds, and annular wedges. These visualizations help to present information about the video content, keyphrases, and topics in an engaging and understandable way.</li>
+</ul>
+
+<h2 id="workflow"><strong>Workflow</strong></h2>
+
+<h3 id="1-data-acquisition-and-preprocessing"><strong>1. Data Acquisition and Preprocessing</strong></h3>
+<p><strong>a. Video to Audio Conversion:</strong> 
+Convert the MP4 video files to MP3 audio files using <code class="language-plaintext highlighter-rouge">ffmpeg</code> or <code class="language-plaintext highlighter-rouge">moviepy</code>. 
+<strong>b. Speech-to-Text Transcription:</strong> 
+Use the OpenAI Whisper model to transcribe the audio files into text and save the transcripts as text files. 
+<strong>c. Create DataFrame:</strong> 
+Load the transcripts into a Pandas DataFrame, associating each transcript with its corresponding video name. 
+<strong>d. Data Cleaning and Normalization:</strong> 
+Apply text normalization techniques (lowercasing, lemmatization, removing non-ASCII characters, URLs, emojis, punctuation, numbers, and stop words) to clean and prepare the transcripts for further analysis. 
+<strong>e. Add Metadata:</strong> 
+Extract video module information and calculate text length to enrich the DataFrame.</p>
+
+<h3 id="2-keyphrase-extraction"><strong>2. Keyphrase Extraction</strong></h3>
+<p><strong>a. Initialize Keyphrase Extractor:</strong> 
+Load the pre-trained keyphrase extraction model (<code class="language-plaintext highlighter-rouge">ml6team/keyphrase-extraction-kbir-inspec</code>). 
+<strong>b. Extract Keyphrases:</strong> 
+Apply the keyphrase extractor to the normalized transcripts to identify important keyphrases for each video. 
+<strong>c. Refine Keyphrases:</strong> 
+Perform further refinement on extracted keyphrases, such as replacing common abbreviations with their full forms and lemmatizing.</p>
+
+<h3 id="3-data-organization-and-analysis"><strong>3. Data Organization and Analysis</strong></h3>
+<p><strong>a. Create Keyword Dictionary:</strong> 
+Build a dictionary mapping keyphrases to their corresponding video names to facilitate search functionality. 
+<strong>b. Create Keyword DataFrame:</strong> 
+Convert the keyword dictionary into a Pandas DataFrame for easier analysis and manipulation. 
+<strong>c. Calculate Keyword Frequency:</strong> 
+Determine the frequency of each keyphrase across all videos. 
+<strong>d. Filter Keyphrases:</strong> 
+Apply criteria based on keyword length, character count, and frequency to filter out less relevant or redundant keyphrases.</p>
+
+<h3 id="4-dashboard-creation-and-visualization"><strong>4. Dashboard Creation and Visualization</strong></h3>
+<p><strong>a. Create Visualization Components:</strong> 
+Use Bokeh to build interactive visualizations, such as bar charts to show video count and average text length by module, word clouds to display frequent keyphrases, annular wedges to represent topic distribution within modules, and a horizontal bar chart to visualize text length for each video. 
+<strong>b. Create Filterable Table:</strong> 
+Implement a searchable and filterable table using Bokeh to display keyphrases and their associated videos. 
+<strong>c. Assemble Dashboard Layout:</strong> 
+Arrange the visualization components and table within a Bokeh layout to create the final dashboard. 
+<strong>d. Display Dashboard:</strong> 
+Show the dashboard using the <code class="language-plaintext highlighter-rouge">show()</code> function from Bokeh, allowing users to interact with the visualizations and search for video content using keyphrases.</p>
+
+<h2 id="functionalities">Functionalities</h2>
+<p><strong>a. Compare modules</strong>
+<img src="/assets/obsidian/9ff33e130373914fe50742562984fb89.png" /></p>
+
+<p><strong>b. WordClouds</strong>
+<img src="/assets/obsidian/4d20f74d52dc9077546a24ea7fac69a4.png" /></p>
+
+<p><strong>c. List Main Topics</strong>
+<img src="/assets/obsidian/59648cee6091ee5ac9ff17a0991252f5.png" /></p>
+
+<p><strong>d. Compare Text Length</strong>
+<img src="/assets/obsidian/78e5cc67d524c36f1bf7a6aeeaff5b99.png" /></p>
+
+<p><strong>e. Search Keywords</strong>
+<img src="/assets/obsidian/7ae0b4e2ef4b89b970dd70b0d83d3963.png" /></p>
+
+<p><img src="/assets/obsidian/1b98ce2e347cc95aaa935f2851c29dea.png" /></p>
+
+<h2 id="demo">Demo</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qyhOOVQII8E?si=dygzJJV0YYQCwfDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-02-25T21:12:07-05:00">February 25, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/projects/project-Building%20a%20classification%20model%20to%20predict%20type-2%20diabetes/" class="pagination--pager" title="Building a classification model to predict type-2 diabetes">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+  
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/tienththtran" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/@tienththtran" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> Youtube</a></li>
+        
+      
+        
+          <li><a href="https://github.com/tientranblog" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <!-- 
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+     -->
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Tien Tran Blog</a>
+  <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>. -->
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

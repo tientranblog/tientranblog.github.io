@@ -1,0 +1,487 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Building a classification model to predict type-2 diabetes - Tien Tran Blog</title>
+<meta name="description" content="A machine learning model to predict type-2 diabetes">
+
+
+  <meta name="author" content="Tien Tran">
+  
+  <meta property="article:author" content="Tien Tran">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Tien Tran Blog">
+<meta property="og:title" content="Building a classification model to predict type-2 diabetes">
+<meta property="og:url" content="http://localhost:4000/projects/project-Building%20a%20classification%20model%20to%20predict%20type-2%20diabetes/">
+
+
+  <meta property="og:description" content="A machine learning model to predict type-2 diabetes">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/obsidian/2b2c15a072165ff6293fa65fe74937c4.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-02-25T21:12:07-05:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/projects/project-Building%20a%20classification%20model%20to%20predict%20type-2%20diabetes/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tien Tran Blog Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Tien Tran Blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/categories/"
+                
+                
+              >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/author_avt.jpg" alt="Tien Tran" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Tien Tran</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Welcome to my blog!</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Ontario, Canada</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/tienththtran" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/@tienththtran" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">Youtube</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/tientranblog" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Building a classification model to predict type-2 diabetes">
+    <meta itemprop="description" content="A machine learning model to predict type-2 diabetes">
+    <meta itemprop="datePublished" content="2025-02-25T21:12:07-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/projects/project-Building%20a%20classification%20model%20to%20predict%20type-2%20diabetes/" itemprop="url">Building a classification model to predict type-2 diabetes
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#business-scenario">Business Scenario</a></li><li><a href="#techniques">Techniques</a></li><li><a href="#workflow">Workflow</a><ul><li><a href="#1-data-collection">1. Data Collection</a></li><li><a href="#2-data-preprocessing">2. Data Preprocessing</a></li><li><a href="#3-model-building">3. Model Building</a></li><li><a href="#4-model-deploying">4. Model Deploying</a></li></ul></li><li><a href="#functionalities">Functionalities</a></li><li><a href="#demo">Demo</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h2 id="business-scenario"><strong>Business Scenario</strong></h2>
+
+<p>Diabetes is a common chronic disease caused by increasing blood sugar level in the body above a certain threshold. Diabetes is classified into type-1 and type-2, in which type-2 diabetes patients account for the majority number of total diabetes patients. Early detection is very important because it helps to reduce complications and minimize death rate.  Therefore, this app is aim to build a machine learning classification model to predict type-2 diabetes.</p>
+
+<h2 id="techniques">Techniques</h2>
+
+<ul>
+  <li>Download data from URL and extract data: requests, zipfile</li>
+  <li>Data manipulation: pandas, numpy</li>
+  <li>Data Visualization: matplotlib, seaborn</li>
+  <li>Handling imbalanced datasets: imbalanced-learn</li>
+  <li>Encoding, scaling features, model training: scikit-learn</li>
+  <li>Model deploying via web app: streamlit</li>
+</ul>
+
+<h2 id="workflow"><strong>Workflow</strong></h2>
+
+<h3 id="1-data-collection">1. Data Collection</h3>
+<ul>
+  <li><strong>Download and Extract Data</strong>: Dataset is downloaded from <a href="https://www.cdc.gov/brfss/annual_data/annual_2022.html">Behavioral Risk Factor Surveillance System</a> (BRFSS) 2022, which was released on July 07, 2023. BRFSS is one of the biggest on-going health-related telephone surveys system in the world, which collects health-related risk behavior, chronic health issues and other data from people more than 18 years old living in the US and participating US territories annually.</li>
+  <li>Selects specific columns relevant to the analysis: We select 15 features related to diabetes in the original dataset to analyze, in which DIABETE4 is output and 14 remaining attributes are input.
+<img src="/assets/obsidian/392e6365c6f637f35c2b527b25fbdfd3.png" /></li>
+  <li>Maps categorical values to more readable labels: because original data is represented in number value, we map them to their actual values by referencing the <a href="https://www.cdc.gov/brfss/annual_data/2022/zip/codebook22_llcp-v2-508.zip">code book</a>.</li>
+  <li>Renames columns to more descriptive names: Since original column name in 2022 BRFSS is complex, we will change names of columns into simpler strings.
+<img src="/assets/obsidian/52504088f15e583626b680192df01723.png" /></li>
+</ul>
+
+<h3 id="2-data-preprocessing">2. Data Preprocessing</h3>
+
+<ul>
+  <li>Handle duplicates, missing values</li>
+  <li>Handle records that have the values “Refused” or “Don’t know/Not sure”</li>
+  <li>Handle outliers which is our of range Q1 - 1.5 IQR and Q3 + 1.5 IQR</li>
+</ul>
+
+<h3 id="3-model-building">3. <strong>Model Building</strong></h3>
+
+<ul>
+  <li>Applies encoding and scaling to the data</li>
+  <li>Uses sampling methods to handle imbalanced datasets</li>
+  <li>Model Training: Defines a set of basic models (e.g., Decision Tree, Random Forest, Gradient Boosting, XGBoost, LightGBM). Fine-tuning on the best performing models and then compares them based on performance metrics and select the best one</li>
+</ul>
+
+<h3 id="4-model-deploying">4. <strong>Model Deploying</strong></h3>
+
+<ul>
+  <li>Load the best model from the pickle file</li>
+  <li>Uses the loaded model to make predictions on new data</li>
+  <li>Building a streamlit app to deploy the model online</li>
+</ul>
+
+<h2 id="functionalities">Functionalities</h2>
+
+<ul>
+  <li>predict type-2 diabetes probabilities of an individual from user input
+<img src="/assets/obsidian/2b2c15a072165ff6293fa65fe74937c4.png" /></li>
+</ul>
+
+<p><img src="/assets/obsidian/4709f53bcbf8cc448e40b9ab2022be79.png" /></p>
+
+<p><img src="/assets/obsidian/79f24330f8b4c12f21f08e7482adfc18.png" /></p>
+
+<ul>
+  <li>determine which indicators are highly associated with type-2 diabetes</li>
+</ul>
+
+<p><img src="/assets/obsidian/ef7a10f20394540cc9f4b7e4f531ff9b.png" /></p>
+
+<p><img src="/assets/obsidian/5ff167211d7419d58b85835c2c9bf237.png" />
+<img src="/assets/obsidian/5eb126a9bb682912ed6bdfad01637843.png" /></p>
+
+<p><img src="/assets/obsidian/e4fcf031fe0afdfc8da91339302fef90.png" /></p>
+
+<h2 id="demo">Demo</h2>
+
+<p><a href="https://diabetes-prediction-web-app-asre.onrender.com">Web App</a></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hLZoEJCJGlo?si=LTgYkWrBklLzY8Xi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-02-25T21:12:07-05:00">February 25, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/project-Building%20a%20AWS%20Machine%20Learning%20Course%20Interactive%20Dashboard/" class="pagination--pager" title="Building a AWS Machine Learning Course Interactive Dashboard">Previous</a>
+    
+    
+      <a href="/projects/project-Building%20a%20local%20Q&A%20chatbot%20on%20custom%20dataset/" class="pagination--pager" title="Building a local Q&amp;A chatbot on custom dataset">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+  
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://www.linkedin.com/in/tienththtran" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+        
+          <li><a href="https://www.youtube.com/@tienththtran" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> Youtube</a></li>
+        
+      
+        
+          <li><a href="https://github.com/tientranblog" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <!-- 
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+     -->
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Tien Tran Blog</a>
+  <!-- Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>. -->
+</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -114,33 +114,34 @@ analytics:
 # Site Author
 author:
   name             : "Tien Tran"
-  avatar           : "/assets/images/avt.jpg"
+  avatar           : "/assets/images/author_avt.jpg"
   bio              : "Welcome to my blog!"
   location         : "Ontario, Canada"
   email            :
   links:
-    - label: "Youtube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://youtube.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/"
+      url: "https://www.linkedin.com/in/tienththtran"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@tienththtran"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/tientranblog"
+    
 
 # Site Footer
 footer:
   links:
-    - label: "Youtube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://youtube.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/"
+      url: "https://www.linkedin.com/in/tienththtran"
+    - label: "Youtube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@tienththtran"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/tientranblog"
 
 
 # Reading Files
