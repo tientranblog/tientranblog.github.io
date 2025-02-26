@@ -1,8 +1,8 @@
 # main links
 main:
-  - title: "Blog"
-    url: "/"
-  - title: "Categories"
-    url: "/categories/"
+  # - title: "Blog"
+  #   url: "/"
+  # - title: "Categories"
+  #   url: "/categories/"
   - title: "Projects"
-    url: "/projects/"
+    url: "/"
