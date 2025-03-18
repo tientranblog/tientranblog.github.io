@@ -70,8 +70,6 @@ Diabetes is a common chronic disease caused by increasing blood sugar level in t
 
 ## Demo
 
-[Web App](https://diabetes-prediction-web-app-asre.onrender.com)
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hLZoEJCJGlo?si=LTgYkWrBklLzY8Xi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
