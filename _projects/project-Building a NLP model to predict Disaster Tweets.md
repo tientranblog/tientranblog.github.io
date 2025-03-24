@@ -6,7 +6,7 @@ author_profile: true
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/cover_photo.jpg
+  teaser: /assets/obsidian/0757c481488e87a4296517f53c864f9d.png
 ---
 ## **Business Scenario**
 
