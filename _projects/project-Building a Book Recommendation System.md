@@ -45,3 +45,7 @@ The project is designed to recommend books to users based on their preferences.
 
 <img src="/assets/obsidian/ad73877c8b48f729af9445206bcfdff2.png" />
 
+## **Demo**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PA00fRVP-dg?si=wltEM71Xi7oqb1d1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
