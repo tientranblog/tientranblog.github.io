@@ -24,26 +24,26 @@ To address this, we use a dataset of **10,000 labeled tweets** from a [Kaggle co
 
 ## **Workflow**
 
-#### **Step 1. Data Setup**
+### **Step 1. Data Setup**
 - Loads the training dataset from a CSV file using `pandas`.
 - If the GloVe embedding file not exists, download the file from a predefined URL.
 
-#### **Step 2. Data Exploration**
+### **Step 2. Data Exploration**
 - Uses Seaborn's `displot` to visualize missing values per variable and saves the plot.
 - Creates a count plot showing the balance of target classes (0 and 1) and saves the visualization.
 - Generates word clouds for each target class (0 and 1) and saves the figure.
 - Calculates text length by word count and visualizes distribution for both target classes.
 
-#### **Step 3. Data Preprocessing**
+### **Step 3. Data Preprocessing**
 - Applies `clean_text()` on all text fields with lowercasing, noise removal, stopword removal, and lemmatization.
 - Removes records with text length greater than a predefined `MAX_LENGTH`.
 
-#### **Step 4. Text Tokenization & Embeddings**
+### **Step 4. Text Tokenization & Embeddings**
 - Creates a tokenizer from the cleaned text corpus.
 - Converts the text corpus into padded sequences to ensure uniform input length.
 - Loads GloVe word vectors and creates an embedding matrix mapping each vocabulary word to its vector.
 
-#### **Step 5. Model Training**
+### **Step 5. Model Training**
 - Train test split: Splits the dataset into 80% training and 20% test data.
 - Model Architecture: 
 	- Embedding layer (using the pretrained embedding matrix, non-trainable)
@@ -54,7 +54,7 @@ To address this, we use a dataset of **10,000 labeled tweets** from a [Kaggle co
 	- Uses `ModelCheckpoint` to save the best model based on validation accuracy.
 	- Trains the model with a batch size of 1000 over `EPOCH_NUM` epochs.
 
-#### **Step 6. Model Evaluation**
+### **Step 6. Model Evaluation**
 - Loads the best saved model.
 - Predicts on the test data and converts probabilities to binary predictions.
 - Evaluates and prints the model's accuracy and classification report.
@@ -87,6 +87,7 @@ To address this, we use a dataset of **10,000 labeled tweets** from a [Kaggle co
 <img src="/assets/obsidian/69897345ca223bc2f18343fcdb2b6aab.png" />
 
 <img src="/assets/obsidian/bb548eea8f0b7f2c62fd0c7250d8ed7b.png" />
+
 ## **Demo**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AwFb3UQXr9U?si=0RQj6Dqx7k34LSRN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
