@@ -1,6 +1,6 @@
 ---
-title: Building a time series model to forecast COVID-19 daily new cases for a selected country
-excerpt: A time series model to predict number of COVID-19 case
+title: Building a time series model to forecast COVID-19 new cases 
+excerpt: A time series model to predict number of COVID-19 case for a selected country
 layout: single
 author_profile: true
 toc: true
@@ -10,7 +10,7 @@ header:
 ---
 ## **Business Scenario**
 
-This app provides an interactive, visual, and quantitative COVID-19 forecasting tool using advanced time series and machine learning techniques. The aim of this app is to anticipate case surges and supports data-driven decision-making.
+This app provides an interactive, visual, and quantitative COVID-19 forecasting tool using advanced time series and machine learning techniques. The training dataset originates from COVID-19 data curated by Our World in Data (OWID), based on reports from [the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)](https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/full_data.csv). It offers daily time series information on confirmed cases and deaths across various countries and regions. Note that JHU CSSE stopped updating this dataset as of March 10, 2023. The aim of this app is to anticipate case surges and supports data-driven decision-making.
 
 ## **Techniques**
 
