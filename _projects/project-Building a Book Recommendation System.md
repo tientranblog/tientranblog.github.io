@@ -23,16 +23,20 @@ The project is designed to recommend books to users based on their preferences.
 
 ### 1. **Data Collection**
 - Scrape book data using one of three methods: `beautifulsoup4`, `selenium`, or `scrapy`.
+
 ### 2. **Data Preprocessing**
 - The scraped data is cleaned and transformed (e.g., removing special characters, converting prices, mapping ratings).
+
 ### 3. **Building Recommendation System**
 - The system uses TF-IDF vectorization to analyze book titles or descriptions and computes cosine similarity to recommend books similar to the user's query.
+
 ### 4. **Model Deploying**
 -  A web-based interface built with `streamlit` allow users to interact with the system to get personalized book recommendations based on text input or filter data.
 
 ## **Functionalities**
 
 - Get book recommendations by similar title or description
+
 <img src="/assets/obsidian/bf70872858e3ded6f68bbcc654c70245.png" />
 
 <img src="/assets/obsidian/1c6505653c3e19e0f8720e3b3feb2284.png" />
