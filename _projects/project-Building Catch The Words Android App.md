@@ -27,13 +27,26 @@ Catch The Words is an educational Android app designed to help users, especially
 
 ## Workflow
 
-Step 1: **Launch App:** The main screen displays the app title and navigation buttons.
-Step 2: **Start Quiz:** Clicking "Play" navigates to the topic selection screen.
-Step 3: **Select Topic:** User selects a topic, which updates the background and available questions.
-Step 4: **Answer Questions:** User selects a question, views an image, and submits an answer.
-Step 5: **Get Feedback:** The app checks the answer and displays `Correct!` or `Try again -_-`
-Step 6: **Request Hint:** User can tap "Hint" to see a clue for the current question.
-Step 7: **Rate App:** User can open a dialog to rate the app and submit feedback, which is displayed on the main screen.
+**Step 1: Launch App** 
+- The main screen displays the app title and navigation buttons.
+
+**Step 2: Start Quiz** 
+- Clicking "Play" navigates to the topic selection screen.
+
+**Step 3: Select Topic** 
+- User selects a topic, which updates the background and available questions.
+
+**Step 4: Answer Questions** 
+- User selects a question, views an image, and submits an answer.
+
+**Step 5: Get Feedback** 
+- The app checks the answer and displays `Correct!` or `Try again -_-`
+
+**Step 6: Request Hint** 
+- User can tap "Hint" to see a clue for the current question.
+
+**Step 7: Rate App** 
+- User can open a dialog to rate the app and submit feedback, which is displayed on the main screen.
 
 ## Functionalities
 
