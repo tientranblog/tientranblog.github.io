@@ -25,17 +25,17 @@ This project is a simple Android productivity app called "Be Focus." It helps us
 
 ## Workflow
 
-Step 1: **Main Screen**
+**Step 1: Main Screen**
 - User enters a task name with input validation (cannot be empty).
 - User selects minutes and seconds for the focus session using spinners.
 - User taps "START" to begin.
 
-Step 2: **Timer Screen**
+**Step 2: Timer Screen**
 - Displays the task name and a countdown timer with a progress bar.
 - User can pause/resume or stop the timer.
 - When the timer finishes, a notification and dialog appear to congratulate the user.
 
-Step 3: **Edit Task:**
+**Step 3: Edit Task**
 - User can edit the current task and timer settings from the timer screen.
 
 ## Functionalities
