@@ -32,18 +32,22 @@ BookCycle is designed to provide a seamless, user-friendly platform for individu
 
 ### Workflow
 
-Step 1: **User Registration & Authentication**
+**Step 1: User Registration & Authentication**
 - Users sign up or sign in using their email and password.
 - Password reset functionality is available for account recovery.
-Step 2: **Profile Management**
+
+**Step 2: Profile Management**
 - Users can view and update their profile details, including name, email, phone, address, and postal code.
-Step 3: **Book Management**
+
+**Step 3: Book Management**
 - Users can upload books for sale, including details such as title, author, category, description, price, contact info, and an image.
 - Users can view and delete their uploaded books.
-Step 4: **Book Discovery**
+
+**Step 4: Book Discovery**
 - All users can browse the list of available books.
 - Search and filter functionality allows users to find books by title or category.
-Step 5: **Contact Seller**
+
+**Step 5: Contact Seller**
 - Buyers can contact sellers via SMS or email directly from the book details page.
 
 ### Functionalities
