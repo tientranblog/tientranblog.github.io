@@ -53,6 +53,7 @@ Diabetes is a common chronic disease caused by increasing blood sugar level in t
 ## Functionalities
 
 - predict type-2 diabetes probabilities of an individual from user input
+
 <img src="/assets/obsidian/2b2c15a072165ff6293fa65fe74937c4.png" />
 
 <img src="/assets/obsidian/4709f53bcbf8cc448e40b9ab2022be79.png" />
