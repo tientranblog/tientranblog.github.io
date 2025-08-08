@@ -10,7 +10,7 @@ header:
 ---
 ## Business Scenario
 
-The goal of this project is to design an AWS-based analytics solution to process and analyze the _Coffee Bean Sales Raw Dataset_ from Kaggle. This solution will provide actionable insights into sales performance, customer behavior, and product profitability by leveraging **Amazon S3**, **AWS Glue**, and **Amazon Athena**.
+The goal of this project is to design an AWS-based analytics solution to process and analyze the [_Coffee Bean Sales Raw Dataset_](https://www.kaggle.com/datasets/saadharoon27/coffee-bean-sales-raw-dataset/data) from Kaggle. This solution will provide actionable insights into sales performance, customer behavior, and product profitability by leveraging **Amazon S3**, **AWS Glue**, and **Amazon Athena**.
 
 The dataset contains coffee sales transactions with the following key tables:
 - **Customers** – customer details such as name, location, and contact information.
